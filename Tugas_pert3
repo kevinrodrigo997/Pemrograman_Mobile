@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      backgroundColor: Colors.grey[300],
+      appBar: AppBar(
+        title: Text('Aplikasi Kevin'),
+        backgroundColor: Colors.blue,
+        leading: new IconButton(
+            icon: new Icon(Icons.menu, color: Colors.black), onPressed: null),
+        actions: <Widget>[
+          new IconButton(
+              icon: new Icon(Icons.thumb_up, color: Colors.black),
+              onPressed: null),
+          new IconButton(
+              icon: new Icon(Icons.thumb_down, color: Colors.black),
+              onPressed: null)
+        ],
+      ),
+      body: Container(
+          child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(image: NetworkImage('https://logodix.com/logo/1707088.png')),
+          Text(
+            'Kevin Rodrigo Semuel Ahab',
+            style: TextStyle(fontSize: 20, color: Colors.red),
+          )
+        ],
+      )),
+    ));
+  }
+}
